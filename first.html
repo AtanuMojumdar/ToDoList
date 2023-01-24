@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>ToDoList</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous"/>
+</head>
+
+<body style="background-color: #393e46" onload="myLoad()">
+    <h1 class="text-light text-center mt-3" style="font-family: 'Lato', sans-serif">
+        ToDoList
+    </h1>
+    <div id="upmsg2" class="alert alert-danger text-center" role="alert" style="display: none;">
+        Invalid Input!
+      </div>
+    <div id="upmsg1" class="alert alert-success text-center" role="alert" style="display: none;">
+        Successfully Updated!
+      </div>
+    <div id="outer-div" class="bg-dark container-sm mt-5 shadow rounded-lg h-75"
+        style="border: 3px solid #7286D3; position: relative">
+        <div id="indiv" class="h-50 mt-5 text-center">
+            <p class="lead text-light" style="font-family: 'Lato', sans-serif">
+                Add item
+            </p>
+            <textarea id="formdiv" placeholder="Enter task to add in your to-do-list ..." class="h-75 rounded"
+                style="text-align: left">
+        </textarea>
+            <br />
+            <button type="button" class="btn btn-outline-success mt-1" onclick="insert()">
+                Submit
+            </button>
+        </div>
+        <div id="listdiv" class="container-sm text-light text-center mt-3"
+            style="overflow-y: auto; scroll-behavior: smooth; display: none">
+            <div class="gg gg1">
+                <div class="index" style="border: 1px solid black">Index</div>
+                <div class="todo">ToDo</div>
+            </div>
+        </div>
+        <div class="inputup" style="display: flex; justify-content: center; align-items: center; margin-top: 10px; flex-direction: column;">
+            <div class="indexup" style="display: none;">
+                <input id="inkey" type="text" style="width: 30%;" placeholder="Index"> <button id="inkey-btn" type="button" class="btn btn-outline-info" onclick="updat_btn()">Enter</button>
+            </div>
+            <div class="textup" style="display: none;">
+                <input id="distext" type="text" style="width: 70%;"> <button id="up-btn" type="button" class="btn btn-outline-info" onclick="upon()">Enter</button>
+            </div>
+
+
+        </div>
+        <button type="button" id="btn-show" class="btn btn-primary btn-ss btn-md" onclick="add()">
+            Add
+        </button>
+        <button type="button" id="btn-del" class="btn btn-primary btn-ss btn-md" onclick="delet()">
+            Delete 
+        </button>
+        <button type="button" id="btn-upd" class="btn btn-primary btn-ss btn-md" onclick="updat()">
+            Update
+        </button>
+
+        <button type="button" id="btn-showl" class="btn btn-primary btn-ss" onclick="show();">
+            Show ToDoList
+        </button>
+        <button id="sl" type="button" class="btn btn-danger btn-sl" onclick="cl();">
+            Clear List
+        </button>
+    </div>
+
+    <script src="script.js"></script>
+
+    <!--
+  This script places a badge on your repl's full-browser view back to your repl's cover
+  page. Try various colors for the theme: dark, light, red, orange, yellow, lime, green,
+  teal, blue, blurple, magenta, pink!
+  -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+    <!--   <script src="https://replit.com/public/js/replit-badge.js" theme="blue" defer></script> -->
+</body>
+
+</html>
